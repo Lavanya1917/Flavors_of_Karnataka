@@ -1,0 +1,220 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #a04000; /* Earthy brown */
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    padding: 1.5em 0;
+    background-color: #d35400; /* Brighter orange-brown */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav input[type="text"] {
+    padding: 0.8em 1em;
+    border: none;
+    border-radius: 25px;
+    margin-right: 1em;
+    width: 250px;
+    font-size: 1em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+nav button {
+    background-color: #e67e22; /* Even brighter orange */
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #d66c11;
+}
+
+/* Food Gallery */
+#foodGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+}
+
+.food-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.food-card img {
+    width: 100%;
+    height: 300px; /* Increased from 250px to 300px for larger display */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.food-card h3 {
+    margin: 1em 0 0.5em;
+    color: #4CAF50; /* Green accent */
+    font-size: 1.5em;
+}
+
+.food-card p {
+    padding: 0 1.5em 1.5em;
+    color: #666;
+    font-size: 0.95em;
+}
+
+.no-results {
+    grid-column: 1 / -1; /* Make it span all columns */
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    padding: 3em;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    backdrop-filter: blur(5px); /* Optional: blur background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2.5em;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px; /* You could increase this for a larger modal and thus larger image */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    max-height: 90vh; /* Limit height for scroll */
+    overflow-y: auto; /* Enable scrolling within modal content */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+#modalFoodImage {
+    max-width: 100%;
+    height: auto; /* Keeps aspect ratio. If you want it to fill more height, consider max-height */
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+}
+
+#modalFoodName {
+    color: #a04000;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#modalFoodDescription {
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.modal-content h3 {
+    color: #d35400;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+}
+
+.modal-content ul, .modal-content ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    color: #666;
+}
+
+.modal-content li {
+    margin-bottom: 0.5em;
+}
+
+#modalCulturalSignificance {
+    font-style: italic;
+    color: #777;
+    border-top: 1px dashed #ddd;
+    padding-top: 1em;
+    margin-top: 2em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 3em;
+    font-size: 0.9em;
+}

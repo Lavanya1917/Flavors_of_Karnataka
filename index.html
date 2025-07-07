@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavors of Karnataka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Flavors of Karnataka</h1>
+        <p>The Flavors of Karnataka showcase diverse regional cuisines. North Karnataka is known for spicy dishes like jolad rotti and yennagai, while South Karnataka offers bisi bele bath and ragi mudde. Coastal areas specialize in seafood and coconut-based dishes like neer dosa and kori rotti. The Malenadu region features peppery, spicy curries and akki rotti. Each region uses local ingredients like ragi, tamarind, and jaggery, making the cuisine rich and unique</p>
+    </header>
+
+    <nav>
+        <input type="text" id="searchInput" placeholder="Search for a dish...">
+        <button onclick="filterFoods('all')">All</button>
+        <button onclick="filterFoods('vegetarian')">Vegetarian</button>
+        <button onclick="filterFoods('non-vegetarian')">Non-Vegetarian</button>
+        <button onclick="filterFoods('sweets')">Sweets</button>
+        <button onclick="filterFoods('snacks')">Snacks</button>
+        </nav>
+
+    <main id="foodGallery">
+        </main>
+
+    <div id="foodModal" class="modal">
+        <div class="modal-content">
+            <h3>Welcome to Flavors of Karnataka:</h3>
+            <span class="close-button">&times;</span>
+            <h2 id="modalFoodName"></h2>
+            <img id="modalFoodImage" src="images\famous-Karnataka-food-items.jpg" alt="Food Image">
+            <p id="modalFoodDescription"></p>
+            <h3>Ingredients:</h3>
+            <ul id="modalIngredientsList"></ul>
+            <h3>Recipe:</h3>
+            <ol id="modalRecipeSteps"></ol>
+            <p id="modalCulturalSignificance"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Flavors of Karnataka. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
